@@ -1,0 +1,15 @@
+web:
+  build: localize
+  ports:
+    - 5001:80
+  volumes:
+    - .:/project
+  links:
+    - mysql:mysql
+
+mysql:
+  build: mysql
+  environment:
+    MYSQL_PASS: eeJa7Ahy
+  volumes:
+    - dump/dump.sql.gz:/dump.sql.gz
