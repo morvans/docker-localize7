@@ -9,7 +9,3 @@ web:
 
 mysql:
   build: mysql
-  environment:
-    MYSQL_PASS: eeJa7Ahy
-  volumes:
-    - dump/dump.sql.gz:/dump.sql.gz
